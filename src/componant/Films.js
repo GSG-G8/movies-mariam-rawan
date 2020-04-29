@@ -35,7 +35,7 @@ export default function Films(){
 
     return(
         <div className="main-como-film">
-            <p>on our site yu can search ablut films and see the trending films</p>
+            <h2 style={{margin:'20px'}}>on our site yu can search ablut films and see the trending films</h2>
             <input
             className="search-film"
             name="serach"
