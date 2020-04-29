@@ -12,7 +12,7 @@
 }
 .container-film{
     align-self: center;
-    margin: 40px 0;
+    margin: 30px auto;
     width: 100%;
     display: flex;
     flex-wrap: wrap;

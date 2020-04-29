@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import Card from './Card'
+import ShowMovies from './showFilms'
 import axios from 'axios'
 
 import './Films.css'
@@ -36,7 +37,7 @@ export default function Films(){
 
     return(
         <div className="main-como-film">
-            <h2 style={{margin:'20px'}}>on our site yu can search ablut films and see the trending films</h2>
+            <h2 style={{margin:'30px'}}>on our site yu can search about films and see the trending films</h2>
             <input
             className="search-film"
             name="serach"
@@ -47,7 +48,7 @@ export default function Films(){
             <div className="container-film">
                 {(error)?'error on search'
                 :(searchFilmValue)?
-                searchFilmValue.map(film=><Card key={film.id} item={film}/>):'display all films'}
+                searchFilmValue.map(film=><Card key={film.id} item={film}/>):<ShowMovies/>}
             </div>
         </div>
     )
