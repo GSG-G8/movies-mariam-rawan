@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios'
+
 import './Films.css'
 
 export default function Films(){ 
@@ -9,7 +10,7 @@ export default function Films(){
     const [error,setError]=useState(null);
 
     useEffect(()=>{
-        if(searchFilm){
+        if(searchFilm.trim()){
             axios.get(`https://api.themoviedb.org/3/search/movie?api_key=304ac5e762f0abd7fc2c27e96bd42840&query=${searchFilm}
             `)
             .then(({data})=>{
@@ -28,11 +29,12 @@ export default function Films(){
         }
     },[searchFilm])
     return(
-        <div>
-            films componant
+        <div className="main-como-film">
+            <p>on our site yu can search ablut films and see the trending films</p>
             <input
+            className="search-film"
             name="serach"
-            placeholder="search about film"
+            placeholder="Enter Film Name "
             value={searchFilm}
             onChange={(e)=>{
                 setSearchFilm(e.target.value)
