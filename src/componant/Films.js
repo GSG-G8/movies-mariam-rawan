@@ -9,6 +9,11 @@ export default function Films(){
     const [searchFilmValue,setSearchFilmValue]=useState([]);
     const [error,setError]=useState(null);
 
+    const handelChange=({target})=>{
+        let film= target.value;
+        setSearchFilm(film)
+    }
+
     useEffect(()=>{
         if(searchFilm.trim()){
             axios.get(`https://api.themoviedb.org/3/search/movie?api_key=304ac5e762f0abd7fc2c27e96bd42840&query=${searchFilm}
@@ -28,6 +33,7 @@ export default function Films(){
             setSearchFilmValue('')
         }
     },[searchFilm])
+
     return(
         <div className="main-como-film">
             <p>on our site yu can search ablut films and see the trending films</p>
@@ -36,9 +42,7 @@ export default function Films(){
             name="serach"
             placeholder="Enter Film Name "
             value={searchFilm}
-            onChange={(e)=>{
-                setSearchFilm(e.target.value)
-            }}
+            onChange={handelChange}
             />
             <div>
                 {(error)?'error on search'
