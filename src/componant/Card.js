@@ -9,7 +9,7 @@ const Card = (props) => {
         alt="movie-img"
         className="movie-container__img"
       />
-      <div className="movie-container__about">
+      <div className="movie-container__information">
         <h2 className="movie-container__title">{item.title}</h2>
         <p className="movie-container__date">{item.overview}</p>
         <p className="movie-container__text">{item.release_date}</p>
