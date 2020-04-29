@@ -6,13 +6,12 @@ function ShowMovies() {
   const [movieList, setMovieList] = useState([]);
   const [error, setError] = useState(null);
 
-  const apiUrl =
-    "https://api.themoviedb.org/3/trending/movie/day?api_key=7cdf7d7de96673cdc912e661988a1435";
-
   useEffect(() => {
     axios
-      .get(apiUrl)
-      .then((res) => setMovieList(res.data.results))
+      .get(
+        "https://api.themoviedb.org/3/trending/movie/day?api_key=7cdf7d7de96673cdc912e661988a1435"
+      )
+      .then(({ data: { results } }) => setMovieList(results))
       .catch((error) => {
         setError(error);
       });
