@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import Card from './Card'
+import ShowMovies from './showFilms'
 import axios from 'axios'
 
 import './Films.css'
@@ -47,7 +48,7 @@ export default function Films(){
             <div className="container-film">
                 {(error)?'error on search'
                 :(searchFilmValue)?
-                searchFilmValue.map(film=><Card key={film.id} item={film}/>):'display all films'}
+                searchFilmValue.map(film=><Card key={film.id} item={film}/>):<ShowMovies/>}
             </div>
         </div>
     )

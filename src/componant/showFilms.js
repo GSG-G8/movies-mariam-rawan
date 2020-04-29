@@ -18,8 +18,8 @@ function ShowMovies() {
   }, []);
 
   return (
-    <div>
-      {movieList.map((item) => (
+    <div className="container-film">
+      {error?<div>error on get data</div> :movieList.map((item) => (
         <Card key={item.id} item={item} />
       ))}
     </div>
