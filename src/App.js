@@ -1,5 +1,6 @@
 import React from "react";
 import Films from "./componant/Films";
+import ShowMovies from "./componant/showFilms";
 import "./App.css";
 
 function App() {
@@ -7,8 +8,9 @@ function App() {
     <div className="App">
       <header className="header">
         <h1>Films</h1>
-        </header>
-      <Films/>
+      </header>
+      <Films />
+      <ShowMovies />
     </div>
   );
 }
