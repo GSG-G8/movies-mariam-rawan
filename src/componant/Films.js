@@ -9,9 +9,8 @@ export default function Films(){
     const [searchFilmValue,setSearchFilmValue]=useState([]);
     const [error,setError]=useState(null);
 
-    const handelChange=({target})=>{
-        let film= target.value;
-        setSearchFilm(film)
+    const handelChange=({target:{value}})=>{
+        setSearchFilm(value)
     }
 
     useEffect(()=>{
