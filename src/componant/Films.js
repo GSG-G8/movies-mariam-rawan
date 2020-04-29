@@ -47,7 +47,7 @@ export default function Films(){
             <div className="container-film">
                 {(error)?'error on search'
                 :(searchFilmValue)?
-                searchFilmValue.map(x=><Card key={x.id} item={x}/>):'display all films'}
+                searchFilmValue.map(film=><Card key={film.id} item={film}/>):'display all films'}
             </div>
         </div>
     )
