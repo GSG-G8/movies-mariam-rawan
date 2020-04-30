@@ -1,11 +1,12 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap');
+
+* {
   margin: 0px;
   padding: 0px;
 }
-.header {
-  color: #61dafb;
-  background-color: #282c34;
-}
-header h1{
-  padding: 25px;
+
+.h1-app {
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Liu Jian Mao Cao', cursive;
 }
