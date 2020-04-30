@@ -17,3 +17,8 @@ Our project is considered is a simple project, it shows a list of movies for the
 ## How the process of our project done:
 
 We start by discussing the idea of our project, then we define the tasks that we are required to finish to do the app. After that we wrote the issues and we divide the tasks between us.
+
+## User Stories:
+
+- As I user, I want to see the trending movies when I open the site for the first time.
+- As I user, I can search for a specific movie.
